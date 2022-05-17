@@ -18,7 +18,7 @@ const app = express()
 app.use(cors())
 app.use(json());
 // const port = 4000
-const port = process.env.PORT || 4000
+const port = 4000
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 app.get("*", function (request, response) {
