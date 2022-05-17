@@ -5,7 +5,9 @@ import cors from 'cors';
 import recipeRouter from './routes/recipe';
 import categoryRouter from './routes/category';
 
-connect('mongodb+srv://axel:7HIx5jeaWJcdVnsK@receptsajten.kd2lz.mongodb.net/receptsajten?retryWrites=true&w=majority').then(() => {
+const path = require("path");
+
+connect('mongodb+srv://gasparo:mosvaredlima30@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority').then(() => {
     console.log('Connected to MongoDB')
     app.listen(port, () => {
     console.log (`Listening on port ${port}`)
@@ -15,7 +17,13 @@ connect('mongodb+srv://axel:7HIx5jeaWJcdVnsK@receptsajten.kd2lz.mongodb.net/rece
 const app = express()
 app.use(cors())
 app.use(json());
-const port = 4000
+// const port = 4000
+const port = process.env.PORT || 4000
+
+app.use(express.static(path.resolve(__dirname, "./client/build")));
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+});
 
 app.get('/', (req: Request, res: Response) => {
 res.send ('Hello World!') 
