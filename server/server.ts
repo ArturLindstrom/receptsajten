@@ -20,10 +20,10 @@ app.use(json());
 // const port = 4000
 const port = 4000
 
-app.use(express.static(path.resolve(__dirname, "./client/build")));
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-});
+// app.use(express.static(path.resolve(__dirname, "./client/build")));
+// app.get("*", function (request, response) {
+//   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+// });
 
 app.get('/', (req: Request, res: Response) => {
 res.send ('Hello World!') 
