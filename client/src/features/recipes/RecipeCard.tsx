@@ -8,8 +8,8 @@ interface RecipeCardProps {
 }
 
 const StyledRecipeCard = styled.div`
-    width: 50rem;
-    max-height: 40rem;
+    width: 30rem;
+    /* max-height: 40rem; */
     margin: 1rem;
     border: 1px solid black;
     border-radius: 0.5rem;
@@ -20,6 +20,7 @@ const StyledRecipeCard = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    text-align: left;
     & > img {
         width: 50%;
         border-radius: 0.5rem;

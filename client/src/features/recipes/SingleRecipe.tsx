@@ -15,7 +15,10 @@ const StyledRecipe = styled.div`
     width: 60%;
     border: 1px solid black;
     border-radius: 5px;
-    background: linear-gradient(lemonchiffon, peru);
+    background: linear-gradient(lemonchiffon, tomato);
+    & ul,ol {
+        text-align: start;
+    }
     & .flex {
         display: flex;
         flex-direction: column;

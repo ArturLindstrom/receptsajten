@@ -43,7 +43,9 @@ const CategoriesNav = () => {
             {showCategories && <h3 className="nav-item" onClick={() => setShowCategories(!showCategories)}>Kategorier ▲</h3>}
             {showCategories && categories.map((category: any) => <NavLink to={`/category/${category._id}`}> <p key={category._id}>{category._id} ({category.count})</p> </NavLink>)}
         </StyledNav>
-            )
+        
+     
+    )
 }
 
 export default CategoriesNav
