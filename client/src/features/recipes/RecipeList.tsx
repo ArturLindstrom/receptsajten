@@ -11,7 +11,8 @@ const StyledRecipeList = styled.div`
     grid-gap: 2rem;
     margin: 0 auto;
     padding: 2rem;
-    width: 60%;
+    grid-column: 2/3;
+    /* width: 60%; */
     `;
 
 const RecipeList = () => {    

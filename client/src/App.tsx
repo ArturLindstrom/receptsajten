@@ -11,8 +11,8 @@ const App = () =>
     {/* <NavLink className='header' to="/"> */}
       <Header/>
     {/* </NavLink> */}
-    <CategoriesNav />
-    {/* <CategoriesNav2 /> */}
+    {/* <CategoriesNav /> */}
+    <CategoriesNav2 />
     <Outlet />
   </div>
 

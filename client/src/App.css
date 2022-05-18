@@ -1,8 +1,11 @@
 .App {
 display: grid;
-place-items: center center;
-  background: linear-gradient(peru,lemonchiffon);
-  text-align: center;
+grid-template-columns: 1fr 7fr;
+place-items: center ;
+background: linear-gradient(peru,lemonchiffon);
+text-align: center;
+margin: 0;
+position: relative;
 }
 
 /* .header {
@@ -17,9 +20,5 @@ place-items: center center;
 
 .active {
   text-decoration: none;
-}
-
-.header:hover {
-  color: lemonchiffon;
 }
 
