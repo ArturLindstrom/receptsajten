@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SingleRecipe from './features/recipes/SingleRecipe';
 import CategoryView from './features/categories/CategoryView';
 import { store } from './app/store'
@@ -14,9 +14,8 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  // <React.StrictMode>
     <Provider store={store}>
-    <HashRouter>
+    <BrowserRouter>
     <Routes>
       <Route path="/" element={<App/>}>
         <Route path="/" element={<RecipeList/>} />
@@ -24,10 +23,8 @@ root.render(
         <Route path="/category/:category" element={<CategoryView/>} />
       </Route>
     </Routes>
-    {/* <App /> */}
-    </HashRouter>
+    </BrowserRouter>
     </Provider>
-  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
