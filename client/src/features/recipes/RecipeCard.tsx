@@ -13,7 +13,7 @@ const StyledRecipeCard = styled.div`
     margin: 1rem;
     border: 1px solid black;
     border-radius: 0.5rem;
-    background-color: lemonchiffon;
+    background-color: #fffbe6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@ const StyledRecipeCard = styled.div`
     align-items: center;
     padding: 1rem;
     text-align: left;
+
     &  img {
         width: 50%;
         border-radius: 0.5rem;
@@ -29,12 +30,12 @@ const StyledRecipeCard = styled.div`
     & h1 {
         text-align: center;
         font-weight: 700;
-        font-family: 'Roboto', sans-serif;
         font-size: 1.5rem;
+        color: #fd5523
     }
     & h2 {
-        font-family: 'Roboto', sans-serif;
         font-size: 1rem;
+        color: #356859
     }
     & a {
         text-decoration: none;  
@@ -42,7 +43,7 @@ const StyledRecipeCard = styled.div`
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        color: black;
+        color: #356859
     }
     & .ratings-number {
         text-align: center;

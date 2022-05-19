@@ -3,13 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { fetchCategoriesThunk } from './categoriesSlice';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import Button from 'react-bootstrap/Button'
-import { NavLink } from 'react-router-dom';
+// import Button from 'react-bootstrap/Button'
+// import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledNav = styled.div`
 position: sticky;
-background-color: white;
+background-color: #fffbe6;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -17,7 +17,10 @@ justify-content: flex-start;
 width: 100%;
 height: 100%;
 grid-column: 1/2;
-grid-row: 1/3;
+grid-row: 2/3;
+& h1{
+  color: #fd5523
+}
 `
 
 

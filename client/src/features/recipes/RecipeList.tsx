@@ -12,8 +12,9 @@ const StyledRecipeList = styled.div`
     margin: 0 auto;
     padding: 2rem;
     grid-column: 2/3;
+    background: #b9e4c9;
     /* width: 60%; */
-    `;
+    `
 
 const RecipeList = () => {    
     const dispatch = useAppDispatch();

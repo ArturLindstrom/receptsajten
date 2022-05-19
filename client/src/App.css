@@ -4,8 +4,13 @@ grid-template-columns: 1fr 7fr;
 place-items: center ;
 background: linear-gradient(peru,lemonchiffon);
 text-align: center;
-margin: 0;
+margin: 0 10rem;
 position: relative;
+/* background: #fffbe6; */
+background: #b9e4c9;
+
+
+
 }
 
 /* .header {

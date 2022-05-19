@@ -7,8 +7,12 @@ import { NavLink } from 'react-router-dom';
 const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
-    grid-column: 2/3;
+    grid-column: 1/3;
     align-self: center;
+    & h1 {
+        font-size: 96px;
+        color: #356859;
+    }
     `
 
 

@@ -13,9 +13,14 @@ const StyledRecipe = styled.div`
     margin: 0 20rem;
     padding: 2rem;
     width: 60%;
-    border: 1px solid black;
-    border-radius: 5px;
-    background: linear-gradient(lemonchiffon, tomato);
+    border: 5px solid #356859;
+    border-radius: 10px;
+    background: #fffbe6;
+    color: #356859;
+    & h1 {
+        font-size: 2rem;
+        color: #fd5523
+    }
     & ul,ol {
         text-align: start;
     }
