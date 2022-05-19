@@ -7,12 +7,7 @@ import categoryRouter from './routes/category';
 
 const path = require("path");
 
-connect('mongodb+srv://gasparo:mosvaredlima30@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority').then(() => {
-    console.log('Connected to MongoDB')
-    app.listen(port, () => {
-    console.log (`Listening on port ${port}`)
-    });
-})
+
 
 const app = express()
 app.use(cors())
@@ -31,3 +26,10 @@ res.send ('Hello World!')
 
 app.use('/recipes', recipeRouter)
 app.use('/category', categoryRouter)
+
+connect('mongodb+srv://gasparo:mosvaredlima30@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority').then(() => {
+    console.log('Connected to MongoDB')
+    app.listen(port, () => {
+    console.log (`Listening on port ${port}`)
+    });
+})
