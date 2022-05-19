@@ -7,18 +7,13 @@ import categoryRouter from './routes/category';
 
 const path = require("path");
 
-connect('mongodb+srv://gasparo:mosvaredlima30@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority').then(() => {
-    console.log('Connected to MongoDB')
-    app.listen(port, () => {
-    console.log (`Listening on port ${port}`)
-    });
-})
+
 
 const app = express()
 app.use(cors())
 app.use(json());
 // const port = 4000
-const port = 4000
+const port = process.env.PORT || 4000
 
 // app.use(express.static(path.resolve(__dirname, "./client/build")));
 // app.get("*", function (request, response) {
@@ -31,3 +26,10 @@ res.send ('Hello World!')
 
 app.use('/recipes', recipeRouter)
 app.use('/category', categoryRouter)
+
+connect('mongodb+srv://gasparo:mosvaredlima30@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority').then(() => {
+    console.log('Connected to MongoDB')
+    app.listen(port, () => {
+    console.log (`Listening on port ${port}`)
+    });
+})

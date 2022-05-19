@@ -8,30 +8,42 @@ interface RecipeCardProps {
 }
 
 const StyledRecipeCard = styled.div`
-    width: 50rem;
-    max-height: 40rem;
+    width: 20rem;
+    /* max-height: 40rem; */
     margin: 1rem;
     border: 1px solid black;
     border-radius: 0.5rem;
-    background-color: lemonchiffon;
+    background-color: #fffbe6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    & > img {
+    text-align: left;
+
+    &  img {
         width: 50%;
         border-radius: 0.5rem;
         border: black solid 1px;
     }
     & h1 {
         text-align: center;
-        font-family: 'Noto Serif', serif;
-        font-weight: 700
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #fd5523
+    }
+    & h2 {
+        font-size: 1rem;
+        color: #356859
     }
     & a {
         text-decoration: none;  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: #356859
     }
     & .ratings-number {
         text-align: center;
@@ -41,13 +53,13 @@ const StyledRecipeCard = styled.div`
 const RecipeCard = ({recipe}: RecipeCardProps) => {
     return (
     <StyledRecipeCard>
+        <Link to={`/recipes/${recipe._id}`}>
         <img src={recipe.imageUrl} alt="receptbild" />
         <div>
-        <Link to={`/recipes/${recipe._id}`}>
             <h1>{recipe.title}</h1>
-        </Link>
-            <p>{recipe.description}</p>
+            {/* <p>{recipe.description}</p> */}
         </div>
+        </Link>
         <div>
             <h2>{recipe.ingredients.length} Ingredienser | {recipe.timeinMins} Minuter</h2>
             <Stars recipeRatings={recipe.ratings} recipeId={recipe._id} edit={false}/>

@@ -3,6 +3,18 @@ import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { fetchRecipesThunk } from "../../features/recipes/recipesSlice";
 import RecipeCard from "./RecipeCard";
 import { RecipeType } from "./recipeTypes";
+import styled from "styled-components";
+
+const StyledRecipeList = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    grid-column: 2/3;
+    background: #b9e4c9;
+    /* width: 60%; */
+    `
 
 const RecipeList = () => {    
     const dispatch = useAppDispatch();
@@ -12,14 +24,14 @@ const RecipeList = () => {
     }, [dispatch]);
 
     return (
-        <div className="recipe-list">
-            <form onSubmit={(e) => e.preventDefault()}>
+        <StyledRecipeList>
+            {recipes.map((recipe: RecipeType) => <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard> )}
+            {/* <form onSubmit={(e) => e.preventDefault()}>
                 <input type="text" placeholder="Sök efter recept"  onChange={(e: React.ChangeEvent<HTMLInputElement>) => dispatch(fetchRecipesThunk(e.target.value))}/>
                 <button type="submit">Sök</button>
-            </form>
-            {recipes.map((recipe: RecipeType) => <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard> )}
+            </form> */}
 
-        </div>
+        </StyledRecipeList>
     )
     }
 export default RecipeList;

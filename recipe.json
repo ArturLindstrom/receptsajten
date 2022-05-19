@@ -1,123 +1,403 @@
 [
 		{
-				"title": "Löksoppa",
-				"description": "Bajsa mer med soppa",
-				"imageUrl": "https://www.lecreuset.se/on/demandware.static/-/Library-Sites-lc-sharedLibrary/default/dw7b08a5b5/images/recipe/HD_PNG_LC_20200430_DK_RC_CI_r0000000000600_DAN.png",
+				"title": "Pasta med svamp- och lökröra",
+				"description": "Pasta med svamp- och lökröra är en skön pastarätt med champinjoner, gul lök och färdig pastasås som grund. När du tillsätter crème fraichen i röran får du den där utsökta krämigheten och med parmesan på toppen av pastan har du en vinnare!",
+				"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_240080/cf_259/pasta_med_svamp-_och_lokrora.jpg",
 				"timeinMins": 120,
-				"ratings": [],
-				"category": ["Soppa", "Vegetarisk"],
+				"ratings": [3,4,5],
+				"category": ["Pasta", "Vegetariskt", "Svamp"],
 				"ingredients":
 						[
 								{
-										"ingredient": "Lök",
-										"amount": 12,
+										"ingredient": "Pasta",
+										"amount": 400,
+										"unit": "g"
+								},
+								{
+										"ingredient": "Gula lökar",
+										"amount": 2,
 										"unit": "st"
 								},
 								{
-										"ingredient": "Hönsbuljong",
-										"amount": 2,
-										"unit": "liter"
+										"ingredient": "Champinjoner",
+										"amount": 250,
+										"unit": "g"
 								},
 								{
-										"ingredient": "Msg",
-										"amount":1,
-										"unit":"hg"
-
+										"ingredient": "crème fraiche",
+										"amount": 1,
+										"unit": "dl"
+								},
+								{
+										"ingredient": "Grönsaksbuljongtärning",
+										"amount": 1,
+										"unit": "st"
 								}
+								
 						],
 				"instructions":
 						[
-						"Skala lök och soppa",
-						"Blanda ihop",
-						"Servera"
+							"Koka pastan enligt anvisningen på förpackningen.",
+							"Skala lök och champinjoner till en liten storlek.",
+							"Häll i en skål och låt stå i ca 30 minuter.",
+							"Fräs lök och champinjoner i lite olja och låt stå i ca 30 minuter.",
+							"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+
 						],
 				"comments":
 						[
 								
+								
+								
 						]
-				},
-{
-		"title": "Köttbullar",
-		"description": "Köttbullar med köttfärs",
-		"imageUrl": "https://cdn-rdb.arla.com/Files/arla-se/3776820023/44d39292-0f40-46d6-a91c-0ff5931476e0.jpg",
-		"timeinMins": 120,
-		"ratings": [],
-		"category":  ["Kött", "Enkel"],
-		"ingredients":
-				[
-						{
-								"ingredient": "Köttbullar",
-								"amount": 12,
-								"unit": "st"
-						},
-						{
-								"ingredient": "Köttfärs",
-								"amount": 2,
-								"unit": "liter"
-						},
-						{
-								"ingredient": "Msg",
-								"amount":1,
-								"unit":"hg"
+		},
 
-						}
-				],
+		{
+				"title": "Pasta med köttfärs- och lök",
+				"description": "Pasta med köttfärs- och lök är en skön pastarätt med champinjoner, köttfärs och färdig pastasås som grund. När du tillsätter crème fraichen i röran får du den där utsökta krämigheten och med parmesan på toppen av pastan har du en vinnare!",
+				"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_137325/cf_259/pasta_bolognese_pa_kycklingfars.jpg",
+				"timeinMins": 190,
+				"ratings": [3,4,5],
+				"category": ["Pasta", "Vegetariskt" ],
+				"ingredients":
+						[
+								{
+										"ingredient": "Pasta",
+										"amount": 400,
+										"unit": "g"
+								},
+								{
+										"ingredient": "Köttfärs",
+										"amount": 2,
+										"unit": "st"
+								},
+								{
+										"ingredient": "Champinjoner",
+										"amount": 250,
+										"unit": "g"
+								},
+								{
+										"ingredient": "crème fraiche",
+										"amount": 1,
+										"unit": "dl"
+								},
+								{
+										"ingredient": "Grönsaksbuljongtärning",
+										"amount": 1,
+										"unit": "st"
+								}
+						],
+				"instructions": 
+								[
+									"Koka pastan enligt anvisningen på förpackningen.",
+									"Skala köttfärs och champinjoner till en liten storlek.",
+									"Häll i en skål och låt stå i ca 30 minuter.",
+									"Fräs köttfärs och champinjoner i lite olja och låt stå i ca 30 minuter.",
+									"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+								],
+				"comments":	
+							[
 
-		"instructions":
-				[
-				"Skala köttbullar och köttfärs",
-				"Blanda ihop",
-				"Servera"
-				],
-		"comments":
-				[]
-},
-{
-    "title": "Spansk tortilla",
-    "description": "Spansk tortilla, potatisomelett eller Tortilla de patatas som de säger i Spanien är deras nationalrätt. I USA kallas den vanligast för Spanish omelett, men även Tortilla Espanola eller Spanish tortilla förekommer. Det är en rätt som till största del består av potatis och ägg. Men även lök, olivolja och salt.",
-    "imageUrl": "https://ingmar.app/blogg/wp-content/uploads/2021/10/Spansk-tortilla.jpg",
-    "timeinMins": 75,
-    "ratings": [],
-    "category": ["Vegetarisk", "Enkel", "Spanien"],
-    "ingredients":
-            [
-                    {
-                            "ingredient": "ägg",
-                            "amount": 6,
-                            "unit": "st"
-                    },
-                    {
-                            "ingredient": "gul lök",
-                            "amount": 1,
-                            "unit": ""
-                    },
-                    {
-                            "ingredient": "potatis",
-                            "amount": 700,
-                            "unit": "gram"
-                    },
-                    {
-                            "ingredient": "olivolja",
-                            "amount":1,
-                            "unit":"dl"
-                    },
-                    {
-                            "ingredient": "salt",
-                            "amount": null,
-                            "unit": ""
-                    },
-                    {
-                            "ingredient": "peppar",
-                            "amount": null,
-                            "unit": ""
-                    }
-            ],
-    "instructions":
-            [
-				"Stek skivad potatis och lök i rikligt med olivolja.",
-        		"Blanda ägg, potatis och lök i en skål.",
-                "Häll tillbaka blandningen i en stekpanna och stek i cirka 15 minuter."
-            ],
-    "comments":[]
-}
+							]
+								
+		},
+		{
+			"title": "Pasta med tonfiskröra",
+			"description": "Pasta med tonfiskröra är en skön pastarätt med tonfiskröra, köttfärs och färdig pastasås som grund. När du tillsätter crème fraichen i röran får du den där utsökta krämigheten och med parmesan på toppen av pastan har du en vinnare!",
+			"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_238483/cf_259/pasta_med_tonfiskrora.jpg",
+			"timeinMins": 40,
+			"ratings": [3,4,5],
+			"category": ["Pasta", "Fisk" ],
+			"ingredients":
+					[
+							{
+									"ingredient": "Pasta",
+									"amount": 400,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Tonfiskröra",
+									"amount": 2,
+									"unit": "st"
+							},
+							{
+									"ingredient": "Köttfärs",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Champinjoner",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "crème fraiche",
+									"amount": 1,
+									"unit": "dl"
+							},
+							{
+									"ingredient": "Grönsaksbuljongtärning",
+									"amount": 1,
+									"unit": "st"
+							}
+					],
+			"instructions": 
+							[
+								"Koka pastan enligt anvisningen på förpackningen.",
+								"Skala tonfiskröra och köttfärs och champinjoner till en liten storlek.",
+								"Häll i en skål och låt stå i ca 30 minuter.",
+								"Fräs tonfiskröra och köttfärs och champinjoner i lite olja och låt stå i ca 30 minuter.",
+								"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+							],
+			"comments":
+						[
+
+						]
+		},
+		{
+			"title": "Enkel mac´n Cheese",
+			"description": "Enkel mac´n Cheese är en skönt rätt med enkla ingredienser som köttfärs, champinjoner och ost. Den är enkelt att göra och är en av de mest populära rätten i Sverige. Den är enkelt att göra och är en av de mest populära rätten i Sverige.",
+			"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_238497/cf_259/enkel_mac%C2%B4n_cheese.jpg",
+			"timeinMins": 20,
+			"ratings": [1,4,5,2],
+			"category": ["Vegetariskt", "Pasta", "Ost" ],
+			"ingredients":
+					[
+							{
+									"ingredient": "Pasta",
+									"amount": 400,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Ost",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Champinjoner",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "mer ost",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Grönsaksbuljongtärning",
+									"amount": 1,
+									"unit": "st"
+							}
+					],
+			"instructions": 
+							[
+								"Koka pastan enligt anvisningen på förpackningen.",
+								"Skala ost och champinjoner till en liten storlek.",
+								"Häll i en skål och låt stå i ca 30 minuter.",
+								"Fräs ost och champinjoner i lite olja och låt stå i ca 30 minuter.",
+								"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+							],
+			"comments":
+						[
+
+						]
+
+		},
+		{
+			"title": "Grönkålspasta med ricotta",
+			"description": "Grönkålspasta med ricotta är en skönt rätt med enkla ingredienser som grönkål, ricotta och ost. Den är enkelt att göra och är en av de mest populära rätten i Sverige. Den är enkelt att göra och är en av de mest populära rätten i Sverige.",
+			"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_235661/cf_259/gronkalspasta_med_ricotta_och_marinerade_tomater.jpg",
+			"timeinMins": 60,
+			"ratings": [1,4,5,2],
+			"category": ["Vegetariskt", "Pasta", "Ost" ],
+			"ingredients":
+					[
+							{
+									"ingredient": "Pasta",
+									"amount": 400,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Ost",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Grönkål",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Ricotta",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Marinerade tomater",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Grönsaksbuljongtärning",
+									"amount": 1,
+									"unit": "st"
+							}
+					],
+			"instructions": 
+							[
+								"Koka pastan enligt anvisningen på förpackningen.",
+								"Skala ost och grönkål till en liten storlek.",
+								"Häll i en skål och låt stå i ca 30 minuter.",
+								"Fräs ost och grönkål i lite olja och låt stå i ca 30 minuter.",
+								"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+							],
+			"comments":
+						[
+
+						]
+		},
+		{
+			"title": "Varmrökt lax med pasta och haricot verts",
+			"description": "Varmrökt lax med pasta och haricot verts är en skönt rätt med enkla ingredienser som lax, haricot verts, ost och pasta. Den är enkelt att göra och är en av de mest populära rätten i Sverige.",
+			"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_195846/cf_259/varmrokt_lax_med_pasta_och_haricots_verts.jpg",
+			"timeinMins": 2,
+			"ratings": [1,4,5,2],
+			"category": ["Fisk", "Pasta", "Ost" ],
+			"ingredients":
+					[
+							{
+									"ingredient": "Pasta",
+									"amount": 400,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Ost",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Lax",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Haricot verts",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Grönsaksbuljongtärning",
+									"amount": 1,
+									"unit": "st"
+							}
+					],
+			"instructions": 
+							[
+								"Koka laxen enligt anvisningen på förpackningen.",
+								"Skala ost och haricot verts till en liten storlek.",
+								"Häll i en skål och låt stå i ca 30 minuter.",
+								"Fräs ost och haricot verts i lite olja och låt stå i ca 30 minuter.",
+								"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+							],
+			"comments":
+						[
+
+						]
+		},
+		{
+			"title": "Fiskspett med apelsinfänkål och risonisallad",
+			"description": "Fiskspett med apelsinfänkål och risonisallad är en skönt rätt med enkla ingredienser som fisk, apelsinfänkål, risonisallad och ost. Den är enkelt att göra och är en av de mest populära rätten i Sverige.",	
+			"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_15690/cf_259/fiskspett_med_apelsinfankal_och_risonisallad.jpg",
+			"timeinMins": 200,
+			"ratings": [1,4,5,2],
+			"category": ["Fisk", "Pasta" ],
+			"ingredients":
+					[
+							{
+									"ingredient": "Fisk",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Apelsinfänkål",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Risonisallad",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Ost",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Grönsaksbuljongtärning",
+									"amount": 1,
+									"unit": "st"
+							}
+					],
+			"instructions": 
+							[
+								"Skala fisken till en liten storlek.",
+								"Häll i en skål och låt stå i ca 30 minuter.",
+								"Fräs apelsinfänkålet och risonisalladen i lite olja och låt stå i ca 30 minuter.",
+								"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+							],
+			"comments":
+						[
+
+						]
+
+		},
+		{
+			"title": "Makrillpasta med citron- och senapsdressing",
+			"description": "Makrillpasta med citron- och senapsdressing är en skönt rätt med enkla ingredienser som makrill, citron, senaps och ost. Den är enkelt att göra och är en av de mest populära rätten i Sverige.",
+			"imageUrl": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_167374/cf_259/makrillpasta_med_citron-_och_senapsdressing_.jpg",
+			"timeinMins": 200,
+			"ratings": [1,4,5,2,5,5,5],
+			"category": ["Fisk", "Pasta" ],
+			"ingredients":
+					[
+							{
+									"ingredient": "Makrill",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Citron",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Senaps",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Ost",
+									"amount": 250,
+									"unit": "g"
+							},
+							{
+									"ingredient": "Grönsaksbuljongtärning",
+									"amount": 1,
+									"unit": "st"
+							}
+					],
+			"instructions": 
+							[
+								"Skala makrilla till en liten storlek.",
+								"Häll i en skål och låt stå i ca 30 minuter.",
+								"Fräs citron och senaps i lite olja och låt stå i ca 30 minuter.",
+								"Låt sjuda utan lock ca 5 min. Smaka av med salt och peppar."
+							],
+			"comments":
+						[
+
+						]
+		}
 ]
+
