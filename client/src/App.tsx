@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import CategoriesNav from './features/categories/CategoriesNav';
 import { Outlet, NavLink } from 'react-router-dom';
 import Header from './features/header/Header';
 import CategoriesNav2 from './features/categories/CategoriesNav2';

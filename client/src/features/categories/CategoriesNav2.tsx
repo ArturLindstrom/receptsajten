@@ -1,12 +1,9 @@
-// import Offcanvas from 'react-bootstrap/Offcanvas'
 import Nav from 'react-bootstrap/Nav';
 import { useState, useEffect } from 'react';
 import { fetchCategoriesThunk } from './categoriesSlice';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-// import Button from 'react-bootstrap/Button'
-// import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-
+import {NavLink} from 'react-router-dom';
 const StyledNav = styled.div`
 position: sticky;
 background-color: #fffbe6;
@@ -29,7 +26,6 @@ function CategoriesNav2() {
   
     const dispatch = useAppDispatch();
     const categories = useAppSelector(state => state.categories.categories);
-    const [showCategories, setShowCategories] = useState(false);
 
     useEffect(() => {
         dispatch(fetchCategoriesThunk());
@@ -39,7 +35,7 @@ function CategoriesNav2() {
     <StyledNav>
       <Nav defaultActiveKey="/home" className="flex-column">
         <h1>Kategorier</h1>
-        {categories.map((category: any) => <Nav.Link href={`/category/${category._id}`}> <p key={category._id}>{category._id} ({category.count})</p> </Nav.Link>)}
+        {categories.map((category: any) => <NavLink key={category.name} to={`/category/${category.name}`}> <p >{category.name} ({category.count})</p> </NavLink>)}
 
       </Nav>
     </StyledNav>
