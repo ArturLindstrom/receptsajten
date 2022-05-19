@@ -1,5 +1,5 @@
 import Nav from 'react-bootstrap/Nav';
-import { useState, useEffect } from 'react';
+import {useEffect } from 'react';
 import { fetchCategoriesThunk } from './categoriesSlice';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import styled from 'styled-components';

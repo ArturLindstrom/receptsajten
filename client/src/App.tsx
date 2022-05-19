@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet} from 'react-router-dom';
 import Header from './features/header/Header';
 import CategoriesNav2 from './features/categories/CategoriesNav2';
 
