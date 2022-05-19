@@ -7,6 +7,10 @@ export const getCategories = async () => {
         { $group: { _id: '$category', count: { $sum: 1 } } },
         { $sort: { count: -1 } }
     ]);
+    for (let category of categories) {
+        category.name = category._id;
+        delete category._id;
+    }
     return categories
 }
 
