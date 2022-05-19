@@ -6,9 +6,6 @@ import recipeRouter from './routes/recipe';
 import categoryRouter from './routes/category';
 
 const path = require("path");
-
-
-
 const app = express()
 app.use(cors())
 app.use(json());
