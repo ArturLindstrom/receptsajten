@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { fetchRecipesThunk } from "../recipes/recipesSlice";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const StyledHeader = styled.header`
     display: flex;
