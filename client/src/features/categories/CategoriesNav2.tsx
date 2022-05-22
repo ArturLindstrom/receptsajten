@@ -23,7 +23,7 @@ const StyledNav = styled.div`
     & a {
         text-decoration: none;
         font-size: 1rem;
-        color: #356859;
+        color: #356859
         /* margin: 1rem; */
     }
 `;
