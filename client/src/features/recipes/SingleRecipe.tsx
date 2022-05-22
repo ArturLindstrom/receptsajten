@@ -10,13 +10,15 @@ import { IngredientType, InstructionType, CommentType } from './recipeTypes';
 const StyledRecipe = styled.div`
     display: grid;
     place-items: center;
-    margin: 0 20rem;
+    margin: 2rem 20rem;
     padding: 2rem;
     width: 60%;
-    border: 5px solid #356859;
+    /* border: 5px solid #356859; */
     border-radius: 10px;
     background: #fffbe6;
     color: #356859;
+    grid-column: 1/3;
+    grid-row: 2/3;
     & h1 {
         font-size: 2rem;
         color: #fd5523
@@ -33,6 +35,7 @@ const StyledRecipe = styled.div`
     & .comments {
         display: flex;
         flex-direction: column;
+        width: 50%;
     }
     & .comment {
         border: 1px solid black;

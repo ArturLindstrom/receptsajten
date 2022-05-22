@@ -9,9 +9,9 @@ interface RecipeCardProps {
 
 const StyledRecipeCard = styled.div`
     width: 20rem;
-    /* max-height: 40rem; */
+    height: 30rem;
     margin: 1rem;
-    border: 1px solid black;
+    border: 3px solid #356859;
     border-radius: 0.5rem;
     background-color: #fffbe6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

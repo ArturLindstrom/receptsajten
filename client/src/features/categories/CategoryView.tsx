@@ -11,8 +11,18 @@ const StyledCategoryView = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    place-items: center center;
     margin: 0 auto;
     padding: 2rem;
+    & input {
+        border: 2px black solid;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+    & h2 {
+        margin: 0
+    }
     `
 
 
@@ -36,8 +46,7 @@ const CategoryView = () => {
         <StyledCategoryView className="category-view">
             <h2>{category}</h2>
             <form onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder={`Sök efter recept i kategorin ${category}`} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onInputChange(e.target.value)} />
-                <button type="submit">Sök</button>
+                <input type="text" placeholder={`Sök efter recept i ${category}`} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onInputChange(e.target.value)} />
             </form>
             {recipes.map((recipe: RecipeType) => <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard> )}
         </StyledCategoryView>

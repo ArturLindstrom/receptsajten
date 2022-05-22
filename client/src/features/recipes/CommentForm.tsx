@@ -3,7 +3,18 @@ import React, { useState } from "react";
 import { postComment } from "../../api";
 
 const StyledCommentForm = styled.form`
-    display: grid;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & input, textarea {
+        border: black 2px solid;
+        padding: .5rem;
+        margin: 0.5rem;
+    }
+
 `
 interface CommentFormProps {
     recipeId: string,
@@ -28,12 +39,12 @@ const handleSubmit = async (e: React.SyntheticEvent) => {
         formToggle ? <StyledCommentForm onSubmit={handleSubmit}>
             <label>
                 Name:
-                <input required type="text" onChange={(e) => setComment({...comment, name: e.target.value})}/>
             </label>
+                <input required type="text" onChange={(e) => setComment({...comment, name: e.target.value})}/>
             <label>
                 Comment:
-                <textarea required onChange={(e) => setComment({...comment, commentBody: e.target.value})}/>
             </label>
+                <textarea required onChange={(e) => setComment({...comment, commentBody: e.target.value})}/>
             <button>Submit</button>
         </StyledCommentForm>
     : <p>Tack för din kommentar!</p>)

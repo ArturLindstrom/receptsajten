@@ -1,27 +1,15 @@
 .App {
 display: grid;
 grid-template-columns: 1fr 7fr;
-place-items: center ;
-background: linear-gradient(peru,lemonchiffon);
+place-items: top; 
 text-align: center;
-margin: 0 10rem;
-position: relative;
-/* background: #fffbe6; */
+margin: 0 12rem;
+/* position: relative; */
 background: #b9e4c9;
-
-
-
+min-height: 120vh;
 }
 
-/* .header {
-  font-family: 'Noto Serif', serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin: 0;
-  line-height: 1;
-  text-decoration: none;
-  color: black;
-} */
+
 
 .active {
   text-decoration: none;

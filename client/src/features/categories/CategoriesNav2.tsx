@@ -14,9 +14,16 @@ justify-content: flex-start;
 width: 100%;
 height: 100%;
 grid-column: 1/2;
-grid-row: 2/3;
+grid-row: 2/4;
+/* padding: 1rem; */
 & h1{
-  color: #fd5523
+  color: #fd5523;
+  margin: 1rem;
+}
+& a {
+  text-decoration: none;
+  font-size: 1rem;
+  /* margin: 1rem; */
 }
 `
 
