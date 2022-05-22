@@ -13,8 +13,8 @@ const StyledRecipeCard = styled.div`
     margin: 1rem;
     border: 3px solid #356859;
     border-radius: 0.5rem;
-    /* background-color: #fffbe6; */
-    background: #b9e4c9;
+    background-color: #f1f5df;
+    /* background: #b9e4c9; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;

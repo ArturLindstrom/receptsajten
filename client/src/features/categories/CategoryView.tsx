@@ -12,10 +12,11 @@ import styled from "styled-components";
 const StyledCategoryView = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    place-items: center center;
+    column-gap: 5rem;
     margin: 0 auto;
+    min-height: 120vh;
     padding: 2rem;
+    grid-column: 2/3;
     & input {
         border: 2px black solid;
         border-radius: 0.5rem;
@@ -25,7 +26,7 @@ const StyledCategoryView = styled.div`
     & h1 {
         margin: 0;
         color: #fd5523;
-        
+
     }
     & .empty-list {
       grid-column: 1/3;
@@ -55,14 +56,14 @@ const CategoryView = () => {
                     type="text"
                     placeholder={`Sök recept i ${category}`}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        onInputChange(e.target.value)
+                      onInputChange(e.target.value)
                     }
-                />
+                    />
             </form>
+            {!recipes.length && <h2 className="empty-list">Inga recept matchade din sökning!</h2>}
             {recipes.map((recipe: RecipeType) => (
                 <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard>
             ))}
-            {!recipes.length && <h2 className="empty-list">Inga recept matchade din sökning!</h2>}
         </StyledCategoryView>
     );
 };
