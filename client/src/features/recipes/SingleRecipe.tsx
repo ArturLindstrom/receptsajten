@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
-import Stars from './Stars';
-import CommentForm from './CommentForm';
+import { useEffect } from "react";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import Stars from "./Stars";
+import CommentForm from "./CommentForm";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
-import { fetchByIdThunk, addSingleRecipeToState } from './recipesSlice';
-import { IngredientType, InstructionType, CommentType } from './recipeTypes';
+import { fetchByIdThunk, addSingleRecipeToState } from "./recipesSlice";
+import { IngredientType, InstructionType, CommentType } from "./recipeTypes";
 
 const StyledRecipe = styled.div`
     display: grid;
@@ -21,9 +21,10 @@ const StyledRecipe = styled.div`
     grid-row: 2/3;
     & h1 {
         font-size: 2rem;
-        color: #fd5523
+        color: #fd5523;
     }
-    & ul,ol {
+    & ul,
+    ol {
         text-align: start;
     }
     & .flex {
@@ -42,36 +43,36 @@ const StyledRecipe = styled.div`
         border-radius: 0.5rem;
         background-color: lemonchiffon;
         padding: 1rem;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
     }
     & .comment-list {
         display: flex;
-        flex-direction: column-reverse
+        flex-direction: column-reverse;
     }
     & .comment-name {
         font-weight: bold;
         margin: 0;
-    } 
+    }
     & .rating-number {
         font-size: 0.8rem;
     }
-`
+`;
 
 const Recipe = () => {
     const { id } = useParams();
     const dispatch = useAppDispatch();
     const commentSent = async () => {
         dispatch(fetchByIdThunk(id));
-    }
-  const recipe = useAppSelector(state => state.recipes.singleRecipe);
-  const recipes = useAppSelector(state => state.recipes.recipes);
+    };
+    const recipe = useAppSelector((state) => state.recipes.singleRecipe);
+    const recipes = useAppSelector((state) => state.recipes.recipes);
 
-    useEffect(() => {   
-        const foundRecipe = recipes.find(recipe => recipe._id === id)
-        if(!foundRecipe){
+    useEffect(() => {
+        const foundRecipe = recipes.find((recipe) => recipe._id === id);
+        if (!foundRecipe) {
             dispatch(fetchByIdThunk(id));
         } else {
-            dispatch(addSingleRecipeToState(foundRecipe))
+            dispatch(addSingleRecipeToState(foundRecipe));
         }
     }, [id, recipes, dispatch]);
 
@@ -79,47 +80,70 @@ const Recipe = () => {
         <StyledRecipe>
             <h1>{recipe.title}</h1>
             <div>
-                <div className='flex'>
-                    <p>
-                        {recipe.description}
-                    </p>
+                <div className="flex">
+                    <p>{recipe.description}</p>
                     <div>
-                    {recipe.ratings && <Stars edit={true} recipeId={recipe._id} recipeRatings={recipe.ratings} />}
-                    <p className="ratings-number">{recipe.ratings && recipe.ratings.length} omdömen</p>
-                    <h3>{recipe.ratings && recipe.ingredients.length} Ingredienser | {recipe.timeinMins} Minuter</h3>
+                        {recipe.ratings && (
+                            <Stars
+                                edit={true}
+                                recipeId={recipe._id}
+                                recipeRatings={recipe.ratings}
+                            />
+                        )}
+                        <p className="ratings-number">
+                            {recipe.ratings && recipe.ratings.length} omdömen
+                        </p>
+                        <h3>
+                            {recipe.ratings && recipe.ingredients.length}{" "}
+                            Ingredienser | {recipe.timeinMins} Minuter
+                        </h3>
                     </div>
-                <img src={recipe.imageUrl} alt={recipe.title} width="400px"/>
+                    <img
+                        src={recipe.imageUrl}
+                        alt={recipe.title}
+                        width="400px"
+                    />
                 </div>
             </div>
             <div>
                 <h2>Ingredienser</h2>
                 <ul>
-                    {recipe.ingredients && recipe.ingredients.map((ingredient:IngredientType) => (
-                        <li key={ingredient.ingredient}>{ingredient.amount} {ingredient.unit} {ingredient.ingredient}</li>
-                    ))}
+                    {recipe.ingredients &&
+                        recipe.ingredients.map((ingredient: IngredientType) => (
+                            <li key={ingredient.ingredient}>
+                                {ingredient.amount} {ingredient.unit}{" "}
+                                {ingredient.ingredient}
+                            </li>
+                        ))}
                 </ul>
                 <h2>Gör såhär</h2>
                 <ol>
-                    {recipe.instructions && recipe.instructions.map((instruction: InstructionType) => (
-                        <li key={instruction.toString()}>{instruction.toString()}</li>
-                    ))}
+                    {recipe.instructions &&
+                        recipe.instructions.map(
+                            (instruction: InstructionType) => (
+                                <li key={instruction.toString()}>
+                                    {instruction.toString()}
+                                </li>
+                            )
+                        )}
                 </ol>
             </div>
-            <div className='comments'>
+            <div className="comments">
                 <h2>Kommentarer</h2>
                 <CommentForm recipeId={recipe._id} trigger={commentSent} />
                 <div className="comment-list">
-                    {recipe.comments && recipe.comments.map((comment:CommentType) => (
-                        <div className="comment" key={comment._id}>
-                            <h4 className="comment-name">{comment.name}</h4>
-                            <p>{comment.commentBody}</p>
-                            <p>{comment.createdAt}</p>
-                        </div>
-                    ))}
+                    {recipe.comments &&
+                        recipe.comments.map((comment: CommentType) => (
+                            <div className="comment" key={comment._id}>
+                                <h4 className="comment-name">{comment.name}</h4>
+                                <p>{comment.commentBody}</p>
+                                <p>{comment.createdAt}</p>
+                            </div>
+                        ))}
                 </div>
             </div>
         </StyledRecipe>
-    )
-}
+    );
+};
 
 export default Recipe;

@@ -16,7 +16,7 @@ export interface InstructionType {
 }
 
 export interface RecipeType {
-    _id: string,
+    _id: string;
     title: string;
     description: string;
     imageUrl: string;

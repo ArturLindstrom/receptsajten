@@ -9,45 +9,54 @@ const StyledCommentForm = styled.form`
     align-items: center;
     justify-content: center;
 
-    & input, textarea {
+    & input,
+    textarea {
         border: black 2px solid;
-        padding: .5rem;
+        padding: 0.5rem;
         margin: 0.5rem;
     }
-
-`
+`;
 interface CommentFormProps {
-    recipeId: string,
-    trigger: Function,
+    recipeId: string;
+    trigger: Function;
 }
 
-const CommentForm = ({recipeId, trigger}: CommentFormProps) => {
+const CommentForm = ({ recipeId, trigger }: CommentFormProps) => {
     const [comment, setComment] = useState({
         commentBody: "",
         name: "",
-        createdAt: new Date().toLocaleString()
+        createdAt: new Date().toLocaleString(),
     });
 
-const [formToggle, setFormToggle] = useState(true);
-const handleSubmit = async (e: React.SyntheticEvent) => {
-        e.preventDefault()
-        setFormToggle(false)
-        await postComment(recipeId, comment)
-        trigger()
-    }
-    return (
-        formToggle ? <StyledCommentForm onSubmit={handleSubmit}>
-            <label>
-                Name:
-            </label>
-                <input required type="text" onChange={(e) => setComment({...comment, name: e.target.value})}/>
-            <label>
-                Comment:
-            </label>
-                <textarea required onChange={(e) => setComment({...comment, commentBody: e.target.value})}/>
+    const [formToggle, setFormToggle] = useState(true);
+    const handleSubmit = async (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        setFormToggle(false);
+        await postComment(recipeId, comment);
+        trigger();
+    };
+    return formToggle ? (
+        <StyledCommentForm onSubmit={handleSubmit}>
+            <label>Name:</label>
+            <input
+                required
+                type="text"
+                onChange={(e) =>
+                    setComment({ ...comment, name: e.target.value })
+                }
+            />
+            <label>Comment:</label>
+            <textarea
+                required
+                onChange={(e) =>
+                    setComment({ ...comment, commentBody: e.target.value })
+                }
+            />
             <button>Submit</button>
         </StyledCommentForm>
-    : <p>Tack för din kommentar!</p>)
-}
+    ) : (
+        <p>Tack för din kommentar!</p>
+    );
+};
 
 export default CommentForm;

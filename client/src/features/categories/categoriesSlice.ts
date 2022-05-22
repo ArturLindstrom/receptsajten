@@ -1,39 +1,31 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { fetchCategories } from '../../api'
-
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { fetchCategories } from "../../api";
 
 interface CategoryState {
-    categories: string[],
+    categories: string[];
 }
-
 
 const initialState: CategoryState = {
     categories: [],
-}
-
+};
 
 export const fetchCategoriesThunk = createAsyncThunk(
-    'categories/fetch',
+    "categories/fetch",
     async () => {
-        const categories = await fetchCategories()
-        return categories.data
+        const categories = await fetchCategories();
+        return categories.data;
     }
-)
+);
 
 export const categoriesSlice = createSlice({
-    name: 'categories',
+    name: "categories",
     initialState,
-    reducers: {
-        
-    },
+    reducers: {},
     extraReducers: {
         [fetchCategoriesThunk.fulfilled.type]: (state, action) => {
-            state.categories = action.payload
+            state.categories = action.payload;
         },
-    }
+    },
+});
 
-})
-
-
-export default categoriesSlice.reducer
-        
+export default categoriesSlice.reducer;

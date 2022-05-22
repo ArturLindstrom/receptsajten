@@ -1,8 +1,7 @@
-import { Schema, model, Types } from 'mongoose';
-import { IngredientType } from './types/ingredientType';
-import { InstructionType } from './types/instructionType';
-import { CommentType } from './types/commentType';
-
+import { Schema, model, Types } from "mongoose";
+import { IngredientType } from "./types/ingredientType";
+import { InstructionType } from "./types/instructionType";
+import { CommentType } from "./types/commentType";
 
 export interface RecipeType {
     title: string;
@@ -14,48 +13,46 @@ export interface RecipeType {
     ingredients: IngredientType[];
     instructions: InstructionType[];
     comments: CommentType[];
-   
 }
-
 
 const schema = new Schema<RecipeType>({
     title: {
         type: String,
-        required: true
+        required: true,
     },
     description: {
         type: String,
-        required: true
+        required: true,
     },
     imageUrl: {
         type: String,
-        required: true
+        required: true,
     },
     timeinMins: {
         type: Number,
-        required: true
+        required: true,
     },
     ratings: {
         type: [Number],
-        required: true
+        required: true,
     },
     category: {
         type: [String],
-        required: true
+        required: true,
     },
     ingredients: {
         type: [
             {
                 ingredient: String,
                 amount: Number,
-                unit: String
-            }
+                unit: String,
+            },
         ],
-        required: true
+        required: true,
     },
     instructions: {
         type: [String],
-        required: true
+        required: true,
     },
     comments: {
         type: [
@@ -63,16 +60,12 @@ const schema = new Schema<RecipeType>({
                 commentBody: String,
                 name: String,
                 createdAt: String,
-            }
+            },
         ],
-        required: true
+        required: true,
     },
-    
 });
 
+const RecipeModel = model("recipe", schema);
 
-const RecipeModel = model('recipe', schema);
-
-export default RecipeModel
-
-
+export default RecipeModel;
