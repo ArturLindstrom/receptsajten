@@ -12,7 +12,7 @@ const StyledNav = styled.div`
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     grid-column: 1/2;
     grid-row: 2/4;
     padding: 1rem;
