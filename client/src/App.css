@@ -3,10 +3,8 @@
     grid-template-columns: 1fr 7fr;
     place-items: top;
     text-align: center;
-    /* margin: 0 10rem; */
-    /* position: relative; */
-    /* background: #b9e4c9; */
-    background-color: #fffbe6;
+    /* background-color: #fffbe6; */
+    background-color: #356859;
 
     /* background: #473BF0; */
     min-height: 120vh;

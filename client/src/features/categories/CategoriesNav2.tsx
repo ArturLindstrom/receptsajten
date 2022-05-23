@@ -6,7 +6,9 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 const StyledNav = styled.div`
     position: sticky;
-    background: #b9e4c9;
+    /* background: #b9e4c9; */
+    background-color: #f1f5df;
+
     display: flex;
     flex-direction: column;
     align-items: center;
