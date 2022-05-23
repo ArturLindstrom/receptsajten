@@ -12,13 +12,12 @@ const StyledRecipe = styled.div`
     place-items: center;
     margin: 2rem 20rem;
     padding: 2rem;
-    width: 60%;
-    /* border: 5px solid #356859; */
+    width: 50%;
     border-radius: 10px;
     background: #fffbe6;
     color: #356859;
-    /* grid-column: 1/3; */
-    /* grid-row: 2/3; */
+    grid-column: 2/3;
+    grid-row: 2/3;
     & h1 {
         font-size: 2rem;
         color: #fd5523;
