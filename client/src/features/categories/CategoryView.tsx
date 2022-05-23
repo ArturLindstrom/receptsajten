@@ -14,9 +14,9 @@ const StyledCategoryView = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5rem 7fr;
     place-items: top;
-    column-gap: 5rem;
+    gap: 2rem;
+    min-height: 100vh;
     margin: 0 auto;
-    min-height: 120vh;
     padding: 2rem;
     grid-column: 2/3;
     & input {

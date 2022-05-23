@@ -8,12 +8,12 @@ import styled from "styled-components";
 const StyledRecipeList = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 5rem;
+    gap: 2rem;
+    min-height: 100vh;
     place-items: top;
     margin: 0 auto;
     padding: 2rem;
     grid-column: 2/3;
-    min-height: 120vh;
     background-color: #356859;
     
     & h1 {
