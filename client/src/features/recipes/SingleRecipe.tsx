@@ -52,12 +52,17 @@ const StyledRecipe = styled.div`
         flex-direction: column-reverse;
     }
     & .comment-name {
-        font-weight: bold;
-        font-size: 1.2rem;
+        font-weight: bolder;
+        font-size: 1.4rem;
         margin: 0;
     }
     & .rating-number {
         font-size: 0.8rem;
+    }
+
+    & .comment-body {
+        font-size: 1rem;
+        font-weight: lighter;
     }
 `;
 
@@ -139,7 +144,7 @@ const Recipe = () => {
                         recipe.comments.map((comment: CommentType) => (
                             <div className="comment" key={comment._id}>
                                 <h4 className="comment-name">{comment.name}</h4>
-                                <p>{comment.commentBody}</p>
+                                <p className="comment-body">{comment.commentBody}</p>
                                 <p>{comment.createdAt}</p>
                             </div>
                         ))}

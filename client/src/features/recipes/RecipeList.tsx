@@ -14,8 +14,6 @@ const StyledRecipeList = styled.div`
     padding: 2rem;
     grid-column: 2/3;
     min-height: 120vh;
-    /* background: #b9e4c9; */
-    /* background-color: #fffbe6; */
     background-color: #356859;
     
     & h1 {

@@ -12,7 +12,8 @@ import styled from "styled-components";
 const StyledCategoryView = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
+    grid-template-rows: 5rem 7fr;
+    place-items: top;
     column-gap: 5rem;
     margin: 0 auto;
     min-height: 120vh;
@@ -23,16 +24,25 @@ const StyledCategoryView = styled.div`
         border-radius: 0.5rem;
         padding: 0.5rem;
         margin: 0.5rem;
+        grid-row: 1/2;
+    }
+    & form {
+        place-self: center;
+        grid-row: 1/2;
     }
 
     & .empty-list {
       grid-column: 1/3;
+      /* grid-row: 1/2; */
       
     }
     & .header{
         font-size: 2rem;
         color: #f1f5df;
+        grid-row: 1/2;
     }
+
+    
 `;
 
 const CategoryView = () => {
@@ -52,20 +62,20 @@ const CategoryView = () => {
     }, [dispatch, category]);
     return (
         <StyledCategoryView className="category-view">
-            <h1 className="header">{category}</h1>
-            <form onSubmit={(e) => e.preventDefault()}>
-                <input
-                    type="text"
-                    placeholder={`Sök recept i ${category}`}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      onInputChange(e.target.value)
-                    }
-                    />
-            </form>
-            {!recipes.length && <h2 className="empty-list">Inga recept matchade din sökning!</h2>}
-            {recipes.map((recipe: RecipeType) => (
-                <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard>
-            ))}
+                    <h1 className="header">{category}</h1>
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="text"
+                            placeholder={`Sök recept i ${category}`}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                              onInputChange(e.target.value)
+                            }
+                            />
+                    </form>
+                {!recipes.length && <h2 className="empty-list">Inga recept matchade din sökning!</h2>}
+                {recipes.map((recipe: RecipeType) => (
+                    <RecipeCard key={recipe._id} recipe={recipe}></RecipeCard>
+                ))}
         </StyledCategoryView>
     );
 };
