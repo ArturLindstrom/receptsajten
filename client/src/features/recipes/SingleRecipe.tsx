@@ -17,8 +17,8 @@ const StyledRecipe = styled.div`
     border-radius: 10px;
     background: #fffbe6;
     color: #356859;
-    grid-column: 1/3;
-    grid-row: 2/3;
+    /* grid-column: 1/3; */
+    /* grid-row: 2/3; */
     & h1 {
         font-size: 2rem;
         color: #fd5523;
