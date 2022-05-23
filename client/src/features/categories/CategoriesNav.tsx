@@ -5,26 +5,26 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 const StyledNav = styled.div`
-    position: sticky;
+    /* position: sticky; */
     background-color: #f1f5df;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    margin-right: 5rem;
     /* height: 100%; */
     grid-column: 1/2;
     grid-row: 2/4;
-    padding: 1rem;
+    /* padding: 1rem; */
     & h1 {
         color: #fd5523;
-        margin: 1rem;
+        margin-top: 1rem;
     }
     & a {
         text-decoration: none;
         font-size: 1.2rem;
         color: #356859
-        /* margin: 1rem; */
     }
 `;
 

@@ -10,9 +10,9 @@ import { IngredientType, InstructionType, CommentType } from "./recipeTypes";
 const StyledRecipe = styled.div`
     display: grid;
     place-items: center;
-    margin: 2rem 20rem;
+    margin: 2rem 8rem;
     padding: 2rem;
-    width: 50%;
+    /* width: 50%; */
     border-radius: 10px;
     background: #fffbe6;
     color: #356859;
