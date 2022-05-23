@@ -12,6 +12,7 @@ import styled from "styled-components";
 const StyledCategoryView = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
+    place-items: center;
     column-gap: 5rem;
     margin: 0 auto;
     min-height: 120vh;
@@ -23,13 +24,14 @@ const StyledCategoryView = styled.div`
         padding: 0.5rem;
         margin: 0.5rem;
     }
-    & h1 {
-        margin: 0;
-        color: #fd5523;
 
-    }
     & .empty-list {
       grid-column: 1/3;
+      
+    }
+    & .header{
+        font-size: 2rem;
+        color: #f1f5df;
     }
 `;
 
@@ -50,7 +52,7 @@ const CategoryView = () => {
     }, [dispatch, category]);
     return (
         <StyledCategoryView className="category-view">
-            <h1>{category}</h1>
+            <h1 className="header">{category}</h1>
             <form onSubmit={(e) => e.preventDefault()}>
                 <input
                     type="text"

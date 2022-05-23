@@ -41,9 +41,11 @@ const StyledRecipe = styled.div`
     & .comment {
         border: 1px solid black;
         border-radius: 0.5rem;
-        background-color: lemonchiffon;
+        background-color: white;
         padding: 1rem;
         margin: 0.5rem 0;
+        text-align: start;
+        color: black;
     }
     & .comment-list {
         display: flex;
@@ -51,6 +53,7 @@ const StyledRecipe = styled.div`
     }
     & .comment-name {
         font-weight: bold;
+        font-size: 1.2rem;
         margin: 0;
     }
     & .rating-number {

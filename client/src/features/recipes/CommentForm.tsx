@@ -8,6 +8,7 @@ const StyledCommentForm = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    grid-column: 2/3;
 
     & input,
     textarea {

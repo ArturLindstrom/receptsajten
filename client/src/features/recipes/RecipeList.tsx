@@ -9,7 +9,7 @@ const StyledRecipeList = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 5rem;
-    place-items: center;
+    place-items: top;
     margin: 0 auto;
     padding: 2rem;
     grid-column: 2/3;

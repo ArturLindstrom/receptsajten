@@ -6,9 +6,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 const StyledNav = styled.div`
     position: sticky;
-    /* background: #b9e4c9; */
     background-color: #f1f5df;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,20 +15,20 @@ const StyledNav = styled.div`
     height: 100%;
     grid-column: 1/2;
     grid-row: 2/4;
-    /* padding: 1rem; */
+    padding: 1rem;
     & h1 {
         color: #fd5523;
         margin: 1rem;
     }
     & a {
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #356859
         /* margin: 1rem; */
     }
 `;
 
-function CategoriesNav2() {
+function CategoriesNav() {
     const dispatch = useAppDispatch();
     const categories = useAppSelector((state) => state.categories.categories);
 
@@ -58,4 +56,4 @@ function CategoriesNav2() {
     );
 }
 
-export default CategoriesNav2;
+export default CategoriesNav;
