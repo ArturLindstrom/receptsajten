@@ -24,7 +24,10 @@ const StyledNav = styled.div`
     & a {
         text-decoration: none;
         font-size: 1.2rem;
-        color: #356859
+        color: #356859;
+    }
+    & .active {
+        color: #fd5523;
     }
 `;
 
