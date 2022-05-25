@@ -12,7 +12,6 @@ const StyledRecipe = styled.div`
     place-items: center;
     margin: 2rem 8rem;
     padding: 2rem;
-    /* width: 50%; */
     border-radius: 10px;
     background: #fffbe6;
     color: #356859;
