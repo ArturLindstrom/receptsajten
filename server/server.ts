@@ -19,7 +19,7 @@ app.use("/recipes", recipeRouter);
 app.use("/category", categoryRouter);
 
 connect(
-    "mongodb+srv://gasparo:jY0Ma4OVf15fA3Mh@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority"
+    "mongodb+srv://gasparo:TNpm718XJr80R2JL@receptsajten.fvbxs.mongodb.net/receptsajten?retryWrites=true&w=majority"
 ).then(() => {
     console.log("Connected to MongoDB");
     app.listen(port, () => {
